@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lightMode">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  Bootstrap v4.6.1 -->
+	<link href="asstes/css/bootstrap.css" rel="stylesheet">
+	<!--  owl.carousel v2.3.4 -->
+	<link href="asstes/css/owl.carousel.min.css" rel="stylesheet">
+	<link href="asstes/css/owl.theme.default.min.css" rel="stylesheet">
+	<!--  Font logo (blur) -->
+	<link href="asstes/fonts/strangerfixcs.ttf" rel="stylesheet">
+	<!--  font Awesome -->
+	<link href="asstes/fonts/all.min.css" rel="stylesheet">
+	<!--  Style css -->
+    <link href="asstes/css/animate.css" rel="stylesheet"/>
+    <link href="asstes/css/style-shared.css" rel="stylesheet">
+	<link rel="stylesheet" href="asstes/css/style-profile.css">
+
+    <title>Profile | Blur.TV</title>
+</head>
+
+<body>
+	
+	<!-- Loading -->
+    <div id="js-preloader" class="load">
+        <div class="loader">
+            <a class="logo animate__animated animate__hinge" href="#">Blur.<span class="">TV</span></a>
+            <div class="inner one"></div>
+            <div class="inner two"></div>
+            <div class="inner three"></div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- sidebar -->
+    <aside>
+        <!-- User -->
+        <div class="head "> 
+            <div class="w-100 pb-4 d-flex justify-content-between" style="border-bottom: 1px solid #eeeeee42; ">
+                <span class="userAside"><span><i class="fa-solid fa-user-pen fa-xl"></i></span> jack bill</span>
+                <button id="closeSlider" class="d-lg-none"><i class="fa-regular fa-xmark fa-xl mx-3"></i></button>
+            </div>
+        </div>
+        <!-- navbar slider -->
+        <li class="btnfixed d-flex justify-content-between py-1 my-0">
+            <button class="icon d-inline-block d-lg-none themeicons">
+                <i  class="fa-solid fa-moon fa-lg themeicon "></i>
+                <i  class="fa-solid fa-lightbulb-on fa-lg themeicon d-none"></i>
+            </button>
+            <a href="profile.html" class="d-inline-block d-lg-none">
+                <i  class="fa-solid fa-bell-on fa-lg"></i>
+            </a>
+            <a href="profile.html" class="d-inline-block d-lg-none">
+                <i class="fa-solid fa-heart fa-lg"></i>
+            </a>
+        
+        </li>
+        <!-- Items -->
+        <div class="itemAside">
+            <ul class="listAside">
+                <li class="listItem"><i class="fa-light fa-house fa-lg mr-4"></i> <a href="index.html">Home</a></li>
+                <li class="listItem"><i class="fa-regular fa-chart-line-up fa-lg mr-4"></i> <a href="index.html">News</a></li>
+                <li id="btn-series" class="listItem btnAction">
+                <i class="fa-light fa-clapperboard-play fa-lg mr-4"></i> <a href="#">Series</a> <i class="fa-light fa-chevron-down fa-2xs"></i>
+                    <ul>
+                        <li class="dropSeries"><a href="Seaction.html">English Series</a></li>
+                        <li class="dropSeries"><a href="Seaction.html">Arabic Series</a></li>
+                        <li class="dropSeries"><a href="Seaction.html">asia Series</a></li>
+                        <li class="dropSeries"><a href="Seaction.html">Indian Series</a></li>
+                        <li class="dropSeries"><a href="Seaction.html">Turkish Series</a></li>
+                        <li class="dropSeries"><a href="Seaction.html">Anime Series</a></li>
+                    </ul>
+                </li>
+                <li id="btn-movies" class="listItem">
+                    <i class="fa-light fa-popcorn fa-lg mr-4"></i> <a href="#"><button>Movies</button></a> <i class="fa-light fa-chevron-down fa-2xs"></i>
+                    <ul>
+                        <li class="dropMovie"><a href="Seaction.html">English movies</a></li>
+                        <li class="dropMovie"><a href="Seaction.html">Arabic Movies</a></li>
+                        <li class="dropMovie"><a href="Seaction.html">asia movies</a></li>
+                        <li class="dropMovie"><a href="Seaction.html">Indian movies</a></li>
+                        <li class="dropMovie"><a href="Seaction.html">Turkish movies</a></li>
+                        <li class="dropMovie"><a href="Seaction.html">Anime movies</a></li>
+                    </ul>
+                </li>
+                <li class="listItem"><i class="fa-light fa-screwdriver-wrench fa-lg mr-4"></i></i> <a href="admin/dashboard.html">Admin</a></li>
+                <li class="listItem"><i class="fa-light fa-user fa-lg mr-4"></i> <a href="profile.html">Profile</a></li>
+                <li class="listItem"><i class="fa-light fa-file-signature fa-lg mr-4"></i> <a href="contacts.html">Contacts</a></li>
+                <li class="listItem"><i class="fa-light fa-siren-on fa-lg mr-4"></i> <a href="privacy-policy.html">Privacy policy</a></li>
+                <li class="listItem"><i class="fa-light fa-circle-exclamation fa-lg mr-4"></i> <a href="about.html">About-Us</a></li>
+                <li class="listItem"><i class="fa-light fa-coins fa-lg mr-4"></i><a href="payment.html"> Pricing plans</a></li>
+                
+                
+                <li class="listItem"><i class="fa-light fa-right-from-bracket fa-lg mr-4"></i> <a href="profile.html"> Log in / Log out </a></li>
+            </ul>
+        </div>
+    </aside>
+    <!-- End  -->
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <section id="sectionSearch">
+            <div class="sectionSearch">
+                <form>
+                    <button class="close"><i class="fa-regular fa-magnifying-glass fa-lg"></i></button>
+                    <input type="search" placeholder="Find your movie here" >
+                    <a href="#" class="close"><i class="fa-solid fa-regular fa-xmark fa-lg"></i></a>
+                </form>
+            </div>
+            <div class="w-100 h-100">
+                <h3 class="m-5">No search results :</h3>
+            </div>
+        </section>
+        <div class="container-custom">
+            <!-- logo -->
+            <a href="index.html" class="logo">Blur.<span>TV</span></a>
+            <!-- tools nsv -->
+            <div class="d-md-none d-lg-inline-block toolsNav">
+                <ul class="item-nav d-none d-md-flex">
+                    <li><a class=" hvr" href="index.html">Home</a></li>
+                    <li><a class="hvr" href="index.html">News</a></li>
+                    <li class="position-relative">
+                        <a class=" hvr" href="#">Movies</a> <i class="fa-light fa-chevron-down fa-xs"></i>
+                        <div class="dropdownList">
+                            <a href="Seaction.html">English movies</a>
+                            <a href="Seaction.html">Arabic Movies</a>
+                            <a href="Seaction.html">asia movies</a>
+                            <a href="Seaction.html">Indian movies</a>
+                            <a href="Seaction.html">Turkish movies</a>
+                            <a href="Seaction.html">Anime movies</a>
+                        </div>
+                    </li>
+                    <li class="position-relative">
+                        <a class="hvr" href="#">Series</a> <i class="fa-light fa-chevron-down fa-xs"></i>
+                        <div class="dropdownList">
+                            <a href="Seaction.html">English Series</a>
+                            <a href="Seaction.html">Arabic Series</a>
+                            <a href="Seaction.html">asia Series</a>
+                            <a href="Seaction.html">Indian Series</a>
+                            <a href="Seaction.html">Turkish Series</a>
+                            <a href="Seaction.html">Anime Series</a>
+                        </div>
+                    </li>
+                    <li class="position-relative">
+                        <a class="activeNavBar hvr" href="#">More</a> <i class="fa-light fa-chevron-down fa-xs"></i>
+                        <div class="dropdownList">
+                            <a href="admin/dashboard.html">Admin</a>
+                            <a href="profile.html">Profile</a>
+                            <a href="item-details.html">Item Details</a>
+                            <a href="show-Room.html">Show Room</a>
+                            <a href="contacts.html">Contacts</a>
+                            <a href="privacy-policy.html">Privacy policy</a>
+                            <a href="about.html">About-Us</a>
+                            <a href="payment.html">Pricing plans</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- icons -->
+            <div class="iconsnav">
+                <button id="open" class="icon">
+                    <i class="fa-light fa-magnifying-glass fa-lg"></i>
+                </button>
+                
+                <button class="icon d-none d-lg-inline themeicons">
+                    <i  class="fa-light fa-lightbulb-on fa-lg themeicon btnLight"></i>
+                    <i  class="fa-light fa-moon fa-lg themeicon d-none"></i>
+                </button>
+                <!-- toogle Login Logout -->
+                <a class="icon d-none" href="login.html">Sign in</a>
+                <ul class="item-nav d-lg-inline-flex d-none">
+                    <li class="position-relative d-flex align-items-center">
+                        <i class="fa-light fa-chevron-down fa-xs pr-2"></i>
+                        <a class="icon nav-user d-inline-flex" href="login.html">
+                            <img src="asstes/img/user.svg" alt="user">
+                        </a>
+                        <div class="dropdownList">
+                            <a href="profile.html">Profile</a>
+                            <a href="login.html">Log in</a>
+                        </div>
+                    </li>
+                </ul>
+                <button id="openSlider" class="d-lg-none ml-4">
+                    <i class="fa-light fa-bars-staggered fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- End  -->
+
+	<!-- Start Header Img -->
+    <header class="poseterHeader">
+        <div class="container-custom">
+			<div class="profile__user">
+				<div class="profile__avatar">
+					<label for="form__img-upload" class="btn-Camera">
+						<i class="fa-solid fa-camera-retro fa-xl"></i>
+					</label>
+					<input id="form__img-upload" name="form__img-upload" type="file" accept=".png, .jpg, .jpeg" style="display: none;">
+					<img id="form__img"  src="asstes/img/user.svg" alt="">
+				</div>
+				<div class="profile__meta">
+					<h3>John Cena</h3>
+					<span>Blur.TV ID: 78123</span>
+				</div>
+			</div>
+		</div>
+    </header>
+    <!-- End -->
+
+	<!-- content -->
+	<div class="content content--profile">
+		<!-- profile -->
+		<div class="profile">
+			<div class="container-custom">
+				<div class="productRow justify-content-center">
+					<div class="profile__content">
+						<!-- content tabs nav -->
+						<ul class="nav nav-tabs content__tabs content__tabs--profile" id="content__tabs" role="tablist">
+							<li class="nav-item first">
+								<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Profile</a>
+							</li>
+
+							<li class="nav- between">
+								<a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Subscription</a>
+							</li>
+
+							<li class="nav-item last">
+								<a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Settings</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end profile -->
+
+		<div class="container-custom">
+			<!-- content tabs -->
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+					<div class="row row--grid">
+						<!-- stats -->
+						<div class="col-12 col-sm-6 col-xl-3">
+							<div class="stats">
+								<span>Premium plan</span>
+								<p>$34.99 / month</p>
+								<i class="fa-solid fa-briefcase "></i>
+							</div>
+						</div>
+						<!-- end stats -->
+
+						<!-- stats -->
+						<div class="col-12 col-sm-6 col-xl-3">
+							<div class="stats">
+								<span>Films watched</span>
+								<p><a href="#">1 678</a></p>
+								<i class="fa-solid fa-film"></i>
+							</div>
+						</div>
+						<!-- end stats -->
+
+						<!-- stats -->
+						<div class="col-12 col-sm-6 col-xl-3">
+							<div class="stats">
+								<span>Your comments</span>
+								<p><a href="#">2 573</a></p>
+								<i class="fa-solid fa-comments"></i>
+							</div>
+						</div>
+						<!-- end stats -->
+
+						<!-- stats -->
+						<div class="col-12 col-sm-6 col-xl-3">
+							<div class="stats">
+								<span>Your reviews</span>
+								<p><a href="#">1 021</a></p>
+								<i class="fa-solid fa-star-exclamation"></i>
+							</div>
+						</div>
+						<!-- end stats -->
+
+						<!-- dashbox -->
+						<div class="col-12 col-xl-6">
+							<div class="dashbox">
+								<div class="dashbox__title">
+									<h3><i class="icon ion-ios-film"></i>My Favorites List</h3>
+
+									<div class="dashbox__wrap">
+										<a class="dashbox__refresh" href="#"><i class="icon ion-ios-refresh"></i></a>
+										<a class="dashbox__more" href="catalog.html">View All</a>
+									</div>
+								</div>
+
+								<div class="dashbox__table-wrap">
+									<table class="main__table main__table--dash">
+										<thead>
+											<tr>
+												<th>TITLE</th>
+												<th>CATEGORY</th>
+												<th>RATING</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">I Dream in Another Language</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">Movie</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  9.2</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">Benched</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">Movie</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  9.1</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">Whitney</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">TV Series</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  9.0</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">Blindspotting 2</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">TV Series</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  8.9</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">Blindspotting</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">TV Series</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  8.9</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- end dashbox -->
+
+						<!-- dashbox -->
+						<div class="col-12 col-xl-6">
+							<div class="dashbox">
+								<div class="dashbox__title">
+									<h3><i class="icon ion-ios-star-half"></i> Latest reviews</h3>
+
+									<div class="dashbox__wrap">
+										<a class="dashbox__refresh" href="#"><i class="icon ion-ios-refresh"></i></a>
+										<a class="dashbox__more" href="#">View All</a>
+									</div>
+								</div>
+
+								<div class="dashbox__table-wrap">
+									<table class="main__table main__table--dash">
+										<thead>
+											<tr>
+												<th>ITEM</th>
+												<th>AUTHOR</th>
+												<th>RATING</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">I Dream in Another Language</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">John cena</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  7.2</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">Benched</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">John Cena</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  6.3</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">Whitney</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">John Cena</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  8.4</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">Blindspotting</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">John Cena</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i>  9.0</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="main__table-text"><a href="#">I Dream in Another Language</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">John Cena</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"><i class="icon fa-solid fa-star"></i> 7.7</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- end dashbox -->
+
+						<!-- dashbox -->
+						<div class="col-12">
+							<div class="dashbox">
+								<div class="dashbox__title">
+									<h3><i class="icon ion-ios-star-half"></i> notifications <span style="border-radius: 32%;" class="btn btn-primary p-2 m-2">(5)</span></h3>
+
+									<div class="dashbox__wrap">
+										<a class="dashbox__refresh" href="#"><i class="icon ion-ios-refresh"></i></a>
+										<a class="dashbox__more" href="#">View All</a>
+									</div>
+								</div>
+
+								<div class="dashbox__table-wrap">
+									<table class="main__table main__table--dash">
+										<thead>
+											<tr>
+												<th>Type</th>
+												<th>Email</th>
+												<th>Subject</th>
+												<th>Date</th>
+												<th>Show</th>
+												<th>Delete</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="col-4">
+													<div class="main__table-text"><a href="#">Custom</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">blur.tv@info.com</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> New Filem </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> 2023/5/18 | 12:30 Am </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-warning"><i  class="fa-light fa-eye"></i></span></div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-danger"><i  class="fa-light fa-trash"></i></span></div>
+												</td>
+											</tr>
+											
+											<tr>
+												<td class="col-4">
+													<div class="main__table-text"><a href="#">Blur.Tv</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">blur.tv@info.com</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> New Filem </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> 2023/5/18 | 12:30 Am </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-warning"><i  class="fa-light fa-eye"></i></span></div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-danger"><i  class="fa-light fa-trash"></i></span></div>
+												</td>
+											</tr>
+											<tr>
+												<td class="col-4">
+													<div class="main__table-text"><a href="#">Mohamed Salah</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">Mohamed@info.com</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> New Filem </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> 2023/5/18 | 12:30 Am </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-warning"><i  class="fa-light fa-eye"></i></span></div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-danger"><i  class="fa-light fa-trash"></i></span></div>
+												</td>
+											</tr>
+											<tr>
+												<td class="col-4">
+													<div class="main__table-text"><a href="#">Hady</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">hady@gmail.com</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> New Filem </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> 2023/5/18 | 12:30 Am </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-warning"><i  class="fa-light fa-eye"></i></span></div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-danger"><i  class="fa-light fa-trash"></i></span></div>
+												</td>
+											</tr>
+											<tr>
+												<td class="col-4">
+													<div class="main__table-text"><a href="#">CEO</a></div>
+												</td>
+												<td>
+													<div class="main__table-text">CEO@info.com</div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> New Filem </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate"> 2023/5/18 | 12:30 Am </div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-warning"><i  class="fa-light fa-eye"></i></span></div>
+												</td>
+												<td>
+													<div class="main__table-text main__table-text--rate "> <span class="btn btn-outline-danger"><i  class="fa-light fa-trash"></i></span></div>
+												</td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- end dashbox -->
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
+					<div class="row row--grid justify-content-evenly justify-content-center">
+						<!-- Card 0$ -->
+						<a href="payment.html" class="card-wrapper">
+							<!-- card Header -->
+							<div class="card-header">
+								<h2>Free</h2>
+							</div>
+							<!-- card price -->
+							<div class="card-price">
+								<h2>$0</h2>
+								<span>Per month</span>
+							</div>
+							<!-- card detail -->
+							<div class="card-detail">
+								<p><span class="fas fa-check check"></span> <b>1</b> Full user</p>
+								<p><span class="fas fa-check check"></span> <b>5</b> conract per clients</p>
+								<p><span class="fas fa-times nocheck"></span> lorem ipsum dolor</p>
+								<p><span class="fas fa-times nocheck"></span> lorem ipsum dolor</p>
+							</div>
+							<!-- button -->
+							<button class="card-button">i want it</button>
+						</a>
+						<!-- Card 20$ -->
+						<a href="payment.html" class="card-wrapper active">
+							<!-- card Header -->
+							<div class="card-header">
+								<h2>Startup</h2>
+							</div>
+							<!-- card price -->
+							<div class="card-price">
+								<h2>$20</h2>
+								<span>Per month</span>
+							</div>
+							<!-- card detail -->
+							<div class="card-detail">
+								<p><span class="fas fa-check check"></span> <b>1</b> Full user</p>
+								<p><span class="fas fa-check check"></span> <b>5</b> conract per clients</p>
+								<p><span class="fas fa-check check"></span> lorem ipsum dolor</p>
+								<p><span class="fas fa-times nocheck"></span> lorem ipsum dolor</p>
+							</div>
+							<!-- button -->
+							<button class="card-button">i want it</button>
+						</a>
+						<!-- Card 40$ -->
+						<a href="payment.html" class="card-wrapper">
+							<!-- card Header -->
+							<div class="card-header">
+								<h2>Growth</h2>
+							</div>
+							<!-- card price -->
+							<div class="card-price">
+								<h2>$40</h2>
+								<span>Per month</span>
+							</div>
+							<!-- card detail -->
+							<div class="card-detail">
+								<p><span class="fas fa-check check"></span> <b>1</b> Full user</p>
+								<p><span class="fas fa-check check"></span> <b>5</b> conract per clients</p>
+								<p><span class="fas fa-check check"></span> lorem ipsum dolor</p>
+								<p><span class="fas fa-check check"></span> lorem ipsum dolor</p>
+							</div>
+							<!-- button -->
+							<button class="card-button">i want it</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab">
+					<div class="row">
+						<!-- details form -->
+						<div class="col-12 col-lg-6">
+							<form action="#" class="form form--profile">
+								<div class="row row--form">
+									<div class="col-12">
+										<h4 class="form__title">Profile details</h4>
+									</div>
+
+									<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+										<div class="form__group">
+											<label class="form__label" for="username">Username</label>
+											<input id="username" type="text" name="username" class="form__input" placeholder="User Name">
+										</div>
+									</div>
+
+									<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+										<div class="form__group">
+											<label class="form__label" for="email">Email</label>
+											<input id="email" type="text" name="email" class="form__input" placeholder="email@email.com">
+										</div>
+									</div>
+
+									<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+										<div class="form__group">
+											<label class="form__label" for="firstname">First Name</label>
+											<input id="firstname" type="text" name="firstname" class="form__input" placeholder="John">
+										</div>
+									</div>
+
+									<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+										<div class="form__group">
+											<label class="form__label" for="lastname">Last Name</label>
+											<input id="lastname" type="text" name="lastname" class="form__input" placeholder="cena">
+										</div>
+									</div>
+
+									<div class="col-12">
+										<button class="form__btn" type="button">Save</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- end details form -->
+
+						<!-- password form -->
+						<div class="col-12 col-lg-6">
+							<form action="#" class="form form--profile">
+								<div class="row row--form">
+									<div class="col-12">
+										<h4 class="form__title">Change password</h4>
+									</div>
+
+									<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+										<div class="form__group">
+											<label class="form__label" for="oldpass">Old password</label>
+											<input id="oldpass" type="password" name="oldpass" class="form__input">
+										</div>
+									</div>
+
+									<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+										<div class="form__group">
+											<label class="form__label" for="newpass">New password</label>
+											<input id="newpass" type="password" name="newpass" class="form__input">
+										</div>
+									</div>
+
+									<div class="col-12 col-md-6 col-lg-12 col-xl-6">
+										<div class="form__group">
+											<label class="form__label" for="confirmpass">Confirm new password</label>
+											<input id="confirmpass" type="password" name="confirmpass" class="form__input">
+										</div>
+									</div>
+
+									
+
+									<div class="col-12">
+										<button class="form__btn" type="button">Change</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- end password form -->
+					</div>
+				</div>
+			</div>
+			<!-- end content tabs -->
+		</div>
+	</div>
+	<!-- end content -->
+	
+	<!-- Start Logout -->
+	<div class="container-custom">
+		<div class="col-12 p-0 my-3">
+			<button class="form__btn" type="button">Logout</button>
+		</div>
+	</div>
+	<!-- Start Logout -->
+	
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container-custom">
+			<div class="row">
+				<div class="col-12">
+					<div class="footer__content">
+						<!-- logo -->
+                        <a href="./index.html" class="logo">Blur.<span>TV</span></a>
+
+						<span class="footer__copyright">© Blur.TV, 2022-2023 <br> Create by <a href="https://themeforest.net/user/dmitryvolkov/portfolio" target="_blank">Hady Rabie - Mohamed Salah</a></span>
+
+						<nav class="footer__nav">
+							<a href="about.html">About Us</a>
+							<a href="contacts.html">Contacts</a>
+							<a href="privacy.html">Privacy policy</a>
+						</nav>
+
+						<button onclick="topFunction()" id="myBtn" class="footer__back" type="button">
+							<i class="fa-light fa-arrow-up"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- end -->
+
+	<!-- Jquery -->
+    <script src="asstes/js/jquery.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="asstes/js/popper.js"></script>
+    <script src="asstes/js/bootstrap.min.js"></script>
+    <!--  font Awesome -->
+    <script src="asstes/fonts/all.min.js"></script>
+    <!-- OWl Carousel -->
+    <script src="asstes/js/owl.carousel.min.js"></script>
+    
+    <!-- Js Index Java Script -->
+	<script src="asstes/js/index-profile.js"></script>
+    <script src="asstes/js/shared.js"></script>
+	
+</body>
+
+</html>

@@ -1,0 +1,689 @@
+/*----------------------------------------
+Project:	Blur.TV HTML Template
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Theme Dark & light
+2. Header Video player
+3. Episodes
+4. Start Content
+5. Responsive
+
+
+----------------------------------------*/
+
+
+
+/*==============================
+	Header Video player 
+==============================*/
+
+header{
+	height: auto;
+    width: 100%;
+	margin: 30px auto;
+    display: flex;
+    align-items: center;
+	position: relative;
+}
+.titleVideo{
+	display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	letter-spacing: 5px;
+}
+.video-js {
+    width: 100%;
+    max-height: 457px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.video-js .vjs-big-play-button {
+    border-radius: 50px;
+}
+.video-js .vjs-control-bar {
+    background-color: rgb(16 30 82);
+}
+/* liks & Share */
+.liksVid{
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 10px
+}
+.liksVid span{
+	cursor: pointer;
+	color: var(--darkMode);
+}
+.liksVid span:hover{
+	color: #929292;
+}
+.boxtable{
+	color: #EEE !important;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.boxtable a{
+	color: var(--darkMode) !important;
+	transition: all 1s ease;
+}
+.boxtable li:hover a{
+	color: #000!important;
+}
+
+.boxtable ul{
+	width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+    align-content: flex-end;
+	padding:0;
+}
+.boxtable .server {
+    background: #081f70;
+	color: #fff;
+    font-weight: bold;
+	min-width:90px;
+}
+.boxtable li{
+	background: var(--blue-white);
+	color: var(--darkMode);
+    padding: 10px 0px;
+    border-radius: 10px;
+    width: 121px;
+    text-align: center;
+	cursor: pointer;
+	transition: all 1s ease;    
+	box-shadow: 0px 4px 15px #000;
+    margin:10px 10px 20px 10px
+}
+.boxtable .li:hover{
+	color: #000;
+	background: #fcffff;
+    box-shadow: inset 1px 1px 12px rgb(28 29 2 / 90%);
+}
+.boxtable ul .active{
+	box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
+	color:var(--darkMode)!important;
+}
+.boxtable ul .active a{
+	color:var(--darkMode)!important;
+}
+/*==============================
+	End Header
+==============================*/
+
+
+/*==============================
+	Episodes
+==============================*/
+.titleSections{
+	display: inline-flex;
+    border-bottom: 1px solid var(--underline);
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	letter-spacing: 10px
+}
+.titleSections span{
+	font-size: 22px
+}
+.episode{
+	background: var(--blue);
+	max-height: 326px;
+	min-height: 326px;
+	overflow-y: scroll;
+	border-radius: 15px;
+	padding: 0 10px
+
+}
+.episode .numNav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: auto;
+}
+.episode .numNav a{
+	background: var(--blue2);
+    padding-right: 10px;
+    margin: 10px 5px;
+    width: 30%;
+    max-width: 200px;
+	min-width: 115px;
+    border-radius: 15px;
+    display: flex;
+    color: var(--darkMode);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: -9px 4px 15px #000;
+    transition: all 1s ease;   
+}
+/* Season */
+.Season{
+	background: var(--blue);
+	border-radius: 15px;
+	max-width: 240px;
+	padding: 0 10px
+}
+.Season .numNav{
+	width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Season .numNav a{
+	background: var(--blue2);
+	padding-left: 10px;
+    margin: 10px 5px;
+    width: 200px;
+    border-radius: 15px;
+	display: flex;
+    color: var(--darkMode);
+    align-items: center;
+    justify-content: space-between;
+	box-shadow: -9px 4px 15px #000;
+	transition: all 1s ease;    
+}
+.Season .numNav a span, .episode .numNav a span{
+	background: var(--blue-red);
+    color: #EEE;
+    min-width: 42px;
+    height: 42px;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+.Season .numNav a:hover, .episode .numNav a:hover{
+	color: #000!important;
+	background: #fcffff;
+    box-shadow: inset 1px 1px 12px rgb(28 29 2 / 90%);
+}
+.Season .numNav .active span, .episode .numNav .active span{
+	background: var(--red-blue);
+    color: #EEE;
+	box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%);
+
+}
+/*==============================
+	End Episodes
+==============================*/
+
+
+/*==============================
+	Start Content
+==============================*/
+
+
+/* Cards carousel */
+.content h3 {
+	color: var(--darkMode);
+}
+
+.my-10{margin:40px auto}
+.content{
+	position:relative;
+	background: radial-gradient(circle, var(--bg-gradient) 0%, var(--lightMode) 69%, var(--lightMode) 69%, var(--lightMode) 69%);
+    width: 100%;
+    padding: 15px 0px 1px;
+    color: var(--darkMode);
+}
+.content .boxImgs{
+	position: relative;
+    border-radius: 10px;
+    padding: 0;
+    margin: 30px auto;
+    min-width: 186px;
+    height: 310px;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+	
+}
+.content .boxImgs:hover{
+	z-index: 0; 
+}
+.content .boxImgs .itemsCard{
+	position: absolute;
+	border-radius: 10px;
+	width: 210px;
+    height: 330px;
+	backdrop-filter: blur(5px);
+    background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
+	transition: all .3s ease-in-out;
+    padding:0px;
+	z-index: 0;
+	
+}
+.content .boxImgs:hover .itemsCard{
+	width: auto;
+    height: 330px;
+	z-index: 1;
+}
+.content .boxImgs .itemsCard .Img{
+	transition: all .3s ease-in;
+	border-radius: 10px;
+	width: 210px;
+    height: 330px;
+}
+.content .boxImgs:hover .Img{
+	transform: scale(0.9);
+}
+.content .itemsCard img{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+.content .boxImgs .titlefilm{
+	position: absolute;
+    top: 294px;
+    width: 100%;
+	z-index: 3; /* test */
+	margin-left: 10px;
+	text-align: center;
+	font-weight: bold;
+	margin-left: 0;
+}
+.titlefilm{
+	color: #EEE !important;
+}
+.boxImgs:hover .overlaycards {
+	backdrop-filter: blur(5px);
+	background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 26%, rgba(17, 27, 95, 0.764) 71%);
+	width: 210px;
+	height: 300px;
+}
+.overlaycards{
+	z-index: 1;
+    height: 330px !important;
+    width: 210px !important;
+	background: rgb(0,0,0);
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+	background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6980042016806722) 68%, rgba(9,18,32,1) 95%)!important;
+}
+/* detailsCards */
+.boxImgs .detailsCards{
+	position: absolute;
+    top: 0;
+	width: 200px;
+    height: 100%;
+    padding: 21px;
+    text-align: center;
+    color: var(--yellow);
+    z-index: 2;
+    justify-content: space-between;
+    flex-direction: column;
+	display: none;
+	opacity: 0;
+}
+.boxImgs:hover .detailsCards{
+    display: flex;
+	opacity: 1;
+}
+.detailsCards .watchNow{
+	font-size: 20px;
+	margin-top: 20px;
+}
+.watchNow a{
+	color: #EEE;
+}
+.detailsCards .boxType{
+	display: flex;
+    width: 100%;
+    margin-top: 25px;
+}
+.detailsCards .boxType  .btntype{
+	background: var(--yellow);
+	color: #091226;
+    font-weight: bold;
+    max-width: 130px;
+    width: 70px;
+    border-radius: 50px;
+    padding: 5px;
+    font-size: 13px;
+    margin: auto;
+    box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%), 1px 3px 9px rgb(220 226 45 / 40%);
+}
+.detailsCards .boxTrailer {
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+    justify-content: space-between;
+}
+.detailsCards .boxTrailer .btntype{
+	color: #EEE!important;
+    font-weight: bold;
+    width: auto;
+    font-size: 14px;
+}
+/* arrow Carousel Left & Right */
+.arrow_Carousel{
+	position: absolute;
+    top: 12%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.arrow_Carousel button{
+	background: rgb(0,0,0);
+	width: 145px;
+	height: 400px;
+    padding: 0 20px;
+    z-index: 2;
+}
+.arrow_Carousel .section__nav--next{
+	background: linear-gradient(90deg, var(--btn-blur) 0%, var(--btn-blur2) 51%, rgba(0,0,0,0) 100%);
+}
+.arrow_Carousel .section__nav--prev{
+	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--btn-blur2) 51%, var(--btn-blur) 100%);
+}
+.arrow_Carousel button svg{
+    padding: 10px;
+    font-size: 40px;
+    color: var(--darkMode);
+    border-radius: 50px;
+}
+.owl-dots {
+	margin-top:10px;
+	display: flex;
+    justify-content: center;
+}
+.owl-dots button{
+	background: rgb(166, 166, 166) !important;
+    min-width: 15px;
+    height: 15px;
+    border-radius: 50px;
+	margin: 10px;
+    border: 3px solid #EEE !important;
+}
+.owl-dots .active{
+	background: rgb(59 47 141) !important;
+}
+/* btn more danger */
+.moreCardDanger{
+	width: 100%!important;
+	height: 50px!important;
+	margin: 30px auto!important;
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.moreCardDanger .numNav{
+	height: 100%!important;
+	width: 130px;
+}
+.moreCardDanger .numNav a{
+	box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
+    color: #EEE;
+	background: #091226;
+    width: 100px;
+    height: 90%;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+/*==============================
+	End Content
+==============================*/
+
+
+
+/*==============================
+	Responsive
+==============================*/
+@media (max-width: 1460px) {
+	.d-none-1460{
+		display: none;
+	}
+	.d-inline-block-1460{
+		display: inline-block;
+	}
+}
+@media (max-width: 1190px) {
+	.d-none-1190{
+		display: none;
+	}
+	.d-inline-block-1190{
+		display: inline-block;
+	}
+	.titleVideo{
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		letter-spacing: 5px;
+	}
+	.video-js {
+		max-height: 599px;
+	}
+	.boxtable{
+		color: #EEE !important;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		min-width: 100%;
+
+	}
+	
+	.boxtable ul{
+		width: 100%;
+		display: inline-flex;
+		justify-content: space-between;
+		list-style: none;
+		align-items: center;
+		transition: all 1s ease;
+		align-content: stretch;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+}
+
+@media (max-width: 990px) {
+	.d-none-990{
+		display: none !important;
+	}
+	.d-inline-block-990{
+		display: inline-block;
+	}
+	/* video */
+	.video-js {
+		max-height: 410px;
+	}
+	.content .boxImgs{
+		padding: 0;
+		margin: 30px auto;
+		height: 270px;
+	}
+	/* Season */
+	.Season .numNav a{
+		width: 100%;
+		max-width: 200px;
+	}
+	/* card */
+	.content .boxImgs .itemsCard{
+		position: absolute;
+		border-radius: 10px;
+		width: 170px;
+		height: 270px;
+		backdrop-filter: blur(5px);
+		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
+		transition: all .3s ease-in-out;
+		padding:0px;
+		z-index: 0;
+	}
+	.content .boxImgs .itemsCard{
+		position: absolute;
+		border-radius: 10px;
+		width: 200px;
+		height: 300px;
+		backdrop-filter: blur(5px);
+		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
+		transition: all .3s ease-in-out;
+		padding:0px;
+		z-index: 0;
+	}
+	
+	.content .boxImgs:hover .itemsCard{
+		width: auto;
+    	height: 260px;
+		z-index: 1;
+	}
+	.content .boxImgs .itemsCard .Img{
+		transition: all .3s ease-in;
+		border-radius: 10px;
+		width: 200px;
+		height: 275px !important;
+	}
+	.content .boxImgs .titlefilm {
+		font-size: 13px;
+		top: 260px;
+		text-align: center;
+		font-weight: bold;
+		margin-left: 0;
+	}
+	.content .boxImgs:hover .titlefilm {
+		top: 280px;
+		transition: all .5s ease;
+	}
+	/* detailsCards */
+	.boxImgs .detailsCards{
+		top: 0;
+    	left: 0;
+		height: 245px!important;
+	}
+	.overlaycards{
+		height: 310px !important;
+		width: 200px !important;
+	}
+	.boxImgs:hover .overlaycards {
+		backdrop-filter: blur(5px);
+		background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
+		width: 200px;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 740px) {
+	.d-none-740{
+		display: none!important;
+	}
+	.d-flex-740{
+		display: flex!important;
+	}
+	/* Season */
+	.w-100-740{
+		width: 100%;
+	}
+	.titleSeason{
+		display: block!important;
+		font-size:22px;
+		text-align:center;
+		letter-spacing: 10px;
+	}
+	.Season{margin: auto }	
+	.Season .numNav a{
+		width: 100%;
+	}
+	/* video */
+	.video-js {
+		max-height: 290px;
+	}
+	.boxtable li {
+		box-shadow: 0px 4px 15px #000;
+		margin: 10px 10px 20px 10px !important;
+	}
+}
+@media (max-width: 600px) {
+	.d-none-600{
+		display: none!important;
+	}
+	.d-inline-block-600{
+		display: inline-block!important;
+	}
+	/* Header */
+	h4{font-size:19px}
+	/* video */
+	.video-js {
+		border-radius:10px;
+		max-height: 230px;
+	}
+	.container-custom {
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+@media (max-width: 450px) {
+	.d-none-450{
+		display: none!important;
+	}
+	.d-inline-block-450{
+		display: inline-block!important;
+	}
+	/* Header */
+	h4{font-size:16px}
+	.titleVideo{
+		letter-spacing: 0px;
+	}
+	/* video */
+	.video-js {
+		max-height: 183px;
+	}
+	.titleSections h3{
+		font-size: 21px;
+	}	
+	.titleSections{
+		justify-content: center;
+	}
+	.boxtable{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+	
+	.boxtable ul{
+		display: inline-flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-content: flex-end;
+	}
+	.boxtable ul li{
+		width: 91%;
+		font-size: 14px;
+	}
+	/* Season */
+	.Season {
+		max-width: 100%;
+	}
+	/* Search */
+	#sectionSearch form{
+		width: 90%;
+	}
+	#sectionSearch input{
+		width: 100%;
+		min-width: auto!important;
+	}
+	
+}
+
+.video-js[tabindex="-1"] {
+    outline: none;
+    min-height: 400px;
+}

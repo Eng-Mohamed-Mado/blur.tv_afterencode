@@ -1,0 +1,132 @@
+/*----------------------------------------
+Project:	Blur.TV HTML Template
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Fonts
+2. Common styles
+3. Theme Dark & light
+4. Privacy
+5. Title Privacy
+6. content Text
+7. Responsive
+
+
+/*==============================
+Theme Dark & light
+==============================*/
+:root{
+	--lightMode: #EEE;
+	--darkMode: rgba(9,18,32,1);
+	--yellow: orange;
+	--red: #0051ff;
+	--blue-red: #FF0000;
+	--red-blue: #0051ff;
+	--blue-white: #eeeeee;
+	--mov: #4b4b4f;
+	--blue: #eeeeee;
+	--blue2: #EEE;
+	--blue3: #0051ff;
+	--aside: #ffffff;
+	--head: #091226;
+	--yellow-blue: #0f1a32;
+	--gray-blue: #3C4B57;
+	--underline: #00000042;
+	--opacity: rgba(233, 233, 233, 0.544);
+	--opacity1:#eeeeee;
+	--opacity2:#ffd4d645;
+	--opacity3:#f0edff00;
+	--blue-gray-blue: #3C4B57;
+	--bg-gradient:rgba(0, 45, 107, 0);
+	--btn-blur2: #eeeeeeb6;
+	--btn-blur:#eeeeeeb4;
+}
+
+html[data-theme="lightMode"]{
+	--darkMode: #EEE;
+	--lightMode: rgba(9,18,32,1);
+	--yellow: #F7FF00;
+	--red-blue: #FF0000;
+	--blue-red: #0051ff;
+	--red: #FF0000;
+	--blue-white: #0B1538;
+	--head: #09122600;
+	--yellow-blue: #F7FF00;
+	--mov: #111C5F;
+	--blue: #0B1538;
+	--blue2: rgba(9,18,32,1);
+	--blue3: #091226;
+	--aside: #0b1538d1;
+	--gray-blue: #091226;
+	--gray: #35363a00;
+	--underline: #eeeeee42;
+	--opacity:rgba(9, 18, 32, 0.895);
+	--opacity1: rgba(9,18,32,1);
+	--opacity2: rgba(0,0,0,0.6980042016806722);
+	--blue-gray-blue: #091226;
+	--opacity3: rgba(0,0,0,0);
+	--bg-gradient:rgba(0, 44, 107, 0.62);
+	--btn-blur:rgba(9,18,32,1);
+	--btn-blur2:rgba(9,18,32,1);
+}
+
+/* Start privacy */
+.privacy{
+    margin-top: 80px;
+}
+/* Title Privacy Policy */
+.title-box{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.title-box h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    color: var(--darkMode);
+}
+.title-box p{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #7c7c7c;  
+}
+
+/* content Text */
+.contentText{
+    display: block;
+    width: 100%;
+}
+.contentText .Text{
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: 0;
+    align-content: space-around;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.Text h4{
+    width: 26%;
+    min-width:300px;
+    color var(--darkMode);
+}
+.Text p{
+    width: 60%;
+    word-break:break-word;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #7c7c7c;  
+
+}
+/*==============================
+	Responsive
+==============================*/
+@media (max-width: 990px) {
+	.Text p{
+    width: auto;;
+    }
+}

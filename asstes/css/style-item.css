@@ -1,0 +1,831 @@
+/*----------------------------------------
+Project:	Blur.TV HTML Template
+
+Devloper:	Hady Rabie - Mohamed Salah
+----------------------------------------*/
+/*----------------------------------------
+[Table of contents]
+
+1. Theme Dark & light
+2. Header Card Details
+3. Cast
+4. Content
+5. Comment
+6. Responsive
+
+----------------------------------------*/
+
+/*==============================
+Theme Dark & light
+==============================*/
+:root{
+	--lightMode: #EEE;
+	--darkMode: rgba(9,18,32,1);
+	--yellow: orange;
+	--red: #0051ff;
+	--blue: #eeeeee;
+	--mov: #4b4b4f;
+	--blue2: #EEE;
+	--blue3: #0051ff;
+	--aside: #ffffff;
+	--blue-head: #091226;
+	--blue-yellow-blue: #0f1a32;
+	--blue-gray-blue: #3C4B57;
+	--underline: #00000089;
+	--opacity: rgba(233, 233, 233, 0.544);
+	--opacity1:#eeeeee;
+	--opacity2:#ffd4d645;
+	--opacity3:#f0edff00;
+}
+
+html[data-theme="lightMode"]{
+	--darkMode: #EEE;
+	--lightMode: rgba(9,18,32,1);
+	--yellow: #F7FF00;
+	--red: #FF0000;
+	--blue: #0B1538;
+	--blue-head: #09122600;
+	--blue-yellow-blue: #F7FF00;
+	--mov: #111C5F;
+	--blue2: #091226;
+	--blue3: #091226;
+	--aside: #0b1538d1;
+	--blue-gray-blue: #091226;
+	--gray: #35363a00;
+	--underline: #eeeeee42;
+	--opacity:rgba(9, 18, 32, 0.895);
+	--opacity1: rgba(9,18,32,1);
+	--opacity2: rgba(0,0,0,0.6980042016806722);
+	--opacity3: rgba(0,0,0,0);
+}
+/*==============================
+	Header Card Details
+==============================*/
+header{
+	height: 576px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+	overflow: hidden;
+	position: relative;
+}
+.overlay,.overllay{
+	height: 580px;
+	background: #091226;
+	background: linear-gradient(180deg, rgb(0 0 0 / 70%) 0%, rgba(0,0,0,0.6980042016806722) 60%, rgb(9 18 32 / 7%) 86%);
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+.overllay2{
+	height: 580px;
+	background: #091226;
+	background: linear-gradient(184deg, var(--opacity3) 0%, var(--opacity2) 70%, var(--opacity1) 86%);
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+.overlay img{
+	width: 100%;
+	background-size: cover;
+	position: absolute;
+	top: -220px;
+}
+
+/* card */
+header .card{
+	height: 470px;
+    width: 350px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 3px -3px 3px #ffffff8c;
+    position: relative;
+}
+header .card img{
+	min-height: 400px;
+	max-width: 350px;
+	min-width: 300px;
+	border-radius: 15px;
+
+}
+.card .btnTrailer{
+	position: absolute;
+    top: 35%;
+    right: 40%;
+    background: none;
+    color: var(--darkMode);
+    border: 3px solid var(--darkMode);
+    border-radius: 50%;
+    padding: 10px;
+    height: 80px;
+    width: 80px;
+	cursor: pointer;
+	animation-iteration-count: infinite;
+	animation-name: bom;
+  	animation-duration: 1.2s;
+	z-index: 3;
+}
+@keyframes bom {
+from {
+	border: 4px solid var(--darkMode);
+	color: var(--darkMode);
+	font-weight: 100;
+}
+to {
+	border: 3px solid rgb(251, 142, 142);
+	color: rgb(251, 142, 142);
+	transform: scale(0.9);
+	font-weight: 900;
+}
+}
+/* Trailer */
+/* btn */
+.trailer-views{
+	display: flex;
+    margin-top: 10px;
+    width: 350px;
+    justify-content: space-between;
+    margin-left: 0;
+	z-index: 5;
+}
+.trailer-views a{color: #eeeeee!important;}
+
+
+/* details */
+.upDerails{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	z-index: 1;
+}
+header .titleCard, .story, .details, .down-watch{
+	width: 90%;
+    margin: 5px auto;
+    color: var(--darkMode);
+}
+header .story h5{ color: var(--yellow);}
+header .story p{
+	min-height: 110px;
+    max-height: 166px;
+    overflow-y: auto;
+}
+header .details, .down-watch{
+	height: auto;
+}
+.box{
+	display: inline-flex;
+    width: 266px;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 8px;
+}
+.btn-shadow{
+	min-width: 106px;
+    padding: 7px;
+    font-size: 17px;
+    box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
+    background: #0d2456 !important;
+    color: #EEE;
+    border-radius: 10px;
+}
+/* download watch */
+.down-watch .watch ,.down{
+	max-width: 200px;
+    min-height: 60px;
+    text-align: center;
+    display: flex;
+    letter-spacing: 2px;
+    align-items: center;
+    font-size: 18px;
+    padding: 12px;
+    font-size: 18px;
+    background: none;
+    color: var(--darkMode)!important;
+    border-radius: 10px;
+    border: 0.5px solid var(--underline);
+    transition: all 0.3s ease;
+    justify-content: center;
+}
+.down-watch .watch:hover ,.down:hover{
+    color: #bdbdbd!important;
+    background:#091226ae;
+}
+/*==============================
+	End Header
+==============================*/
+
+
+
+/*==============================
+	Start Cast
+==============================*/
+.cast h3 ,.cast p, .cast h4, .cast h5, .cast,.cast a{
+	color: var(--darkMode);
+}
+.mainCast{
+	width: 100%;
+	height: 300px;
+}
+.mainCast .cast img{
+	display: block;
+	margin: auto;
+	border-radius: 50%;
+	width: 100px!important;
+	height: 100px;
+	object-fit: cover;
+    object-position: center;
+
+}
+.titleSections{
+	border-bottom: 1px solid var(--underline);
+}
+.mainCast .cast {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.mainCast .owl-carousel.owl-drag .owl-item {
+    margin: auto 10px !important;
+}
+/*==============================
+	End Cast
+==============================*/
+
+
+
+/*==============================
+	Cards
+==============================*/
+
+main h3 {
+	color: var(--darkMode);
+	z-index: index 3;
+}
+.titleSections{
+	display: inline-flex;
+    border-bottom: 1px solid var(--underline);
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	margin-top: 30px;
+	position: sticky;
+	z-index:3;
+}
+.titleSections a{
+    color: var(--darkMode);
+}
+.my-10{margin:40px auto}
+.carouselCards{
+	position:relative;
+    width: 100%;
+    padding: 15px 0px 1px;
+    color: var(--darkMode);
+}
+.carouselCards .boxImgs{
+	position: relative;
+    border-radius: 10px;
+    padding: 0;
+    margin: 30px auto;
+    min-width: 186px;
+    height: 310px;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+	
+}
+.carouselCards .boxImgs:hover{
+	z-index: 0; 
+}
+.carouselCards .boxImgs .itemsCard{
+	position: absolute;
+	border-radius: 10px;
+	width: 210px;
+    height: 330px;
+	backdrop-filter: blur(5px);
+    background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 38%, rgba(17, 27, 95, 0.764) 71%);
+	transition: all .3s ease-in-out;
+    padding:0px;
+	z-index: 0;
+	
+}
+.carouselCards .boxImgs:hover .itemsCard{
+	width: auto;
+    height: 330px;
+	z-index: 1;
+}
+.carouselCards .boxImgs .itemsCard .Img{
+	transition: all .3s ease-in;
+	border-radius: 10px;
+	width: 210px;
+    height: 330px;
+}
+.carouselCards .boxImgs:hover .Img{
+	transform: scale(0.9);
+}
+.carouselCards .itemsCard img{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+.carouselCards .boxImgs .titlefilm{
+	position: absolute;
+    top: 290px;
+    width: 100%;
+	z-index: 3; /* test */
+	margin-left: 10px;
+	text-align: center;
+	font-weight: bold;
+	transition: all .3s ease-in-out;
+	margin-left: 0;
+}
+.titlefilm{
+	position: absolute;
+    top: 300px;
+    width: 100%;
+}
+.carouselCards .boxImgs:hover .titlefilm{
+	opacity: 0;
+}
+.carouselCards .boxImgs:hover .overlaycards {
+	backdrop-filter: blur(5px);
+	background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(23,42,122,0.499124649859944) 26%, rgba(17, 27, 95, 0.764) 71%);
+	width: 210px;
+	height: 300px;
+}
+.carouselCards .overlaycards{
+	z-index: 1;
+    height: 333px !important;
+    width: 210px !important;
+	background: rgb(0,0,0);
+	border-radius: 10px;
+	position: absolute;
+	top: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgb(0 0 0 / 77%) 50%, rgba(9,18,32,1) 80%)!important;
+}
+.iconCard{
+	position: absolute;
+    bottom: -17px;
+    right: 0px;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.iconCard svg{
+	color: #EEE;
+	cursor:pointer;
+	transition: all .5s;
+}
+.iconCard svg:hover{
+	color: #11bcae;
+	cursor:pointer;
+}
+/* detailsCards */
+.carouselCards .boxImgs .detailsCards{
+	position: absolute;
+    top: 0;
+	left: 4px;
+	width: 200px;
+    height: 98%;
+    padding: 21px;
+    text-align: center;
+    color: var(--yellow);
+    z-index: 2;
+    justify-content: space-between;
+    flex-direction: column;
+	display: none;
+	opacity: 0;
+}
+.carouselCards .boxImgs:hover .detailsCards{
+    display: flex;
+	opacity: 1;
+}
+.carouselCards .detailsCards .watchNow{
+	font-size: 20px;
+	margin-top: 20px;
+	color: #EEE;
+	transition: all 0.5s ease;
+}
+.carouselCards .detailsCards .watchNow:hover ,.boxTrailer:hover{
+	color: #909090;
+}
+.carouselCards .detailsCards .boxType{
+	display: flex;
+    width: 100%;
+    margin-top: 25px;
+}
+.carouselCards .detailsCards .boxType  .btntype{
+	background: var(--yellow);
+	color: #091226;
+    font-weight: bold;
+    max-width: 130px;
+    width: 70px;
+    border-radius: 50px;
+    padding: 5px;
+    font-size: 13px;
+    margin: auto;
+    box-shadow: inset 4px 4px 6px rgb(28 29 2 / 90%), 1px 3px 9px rgb(220 226 45 / 40%);
+}
+.carouselCards .detailsCards .boxTrailer {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.carouselCards .detailsCards .boxTrailer .btntype{
+	color: #EEE!important;
+    font-weight: bold;
+    width: auto;
+    font-size: 14px;
+}
+/* arrow Carousel Left & Right */
+.arrow_Carousel{
+	position: absolute;
+    top: 12%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.arrow_Carousel button{
+	background: rgb(0,0,0);
+	width: 145px;
+	height: 495px;
+    padding: 0 20px;
+    z-index: 2;
+}
+.arrow_Carousel .section__nav--next, .arrow_Carousel .section__nav--next2{
+	background: linear-gradient(90deg, var(--btn-blur) 0%, var(--btn-blur2) 51%, rgba(0,0,0,0) 100%);
+}
+.arrow_Carousel .section__nav--prev, .arrow_Carousel .section__nav--prev2{
+	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--btn-blur2) 51%, var(--btn-blur) 100%);
+}
+.arrow_Carousel button svg{
+    padding: 10px;
+    font-size: 40px;
+    color: var(--darkMode);
+    border-radius: 50px;
+}
+.carouselCards .owl-dots {
+	margin-top:10px;
+	display: flex;
+    justify-content: center;
+}
+.carouselCards .owl-dots button{
+	background: rgb(166, 166, 166) !important;
+    min-width: 15px;
+    height: 15px;
+    border-radius: 50px;
+	margin: 10px;
+    border: 3px solid #EEE !important;
+}
+.carouselCards .owl-dots .active{
+	background: rgb(59 47 141) !important;
+}
+/* btn more */
+.moreCardDanger{
+	width: 100%!important;
+	height: 50px!important;
+	margin: 30px auto!important;
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.moreCardDanger .numNav{
+	height: 100%!important;
+}
+.moreCardDanger .numNav a{
+	box-shadow: inset 1px 1px 10px rgb(88 105 255 / 77%);
+    color: #EEE;
+	background: #091226;
+    width: 100px;
+    height: 90%;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*==============================
+	End Cards
+==============================*/
+
+
+/*==============================
+	Start Comment
+==============================*/
+.comments p, .comments span, .comments svg{
+	color: var(--darkMode) !important;
+}
+.comments .boxComments{
+	background: var(--blue)!important;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	height: auto;
+	border-radius: 10px;
+	width: 100%;
+}
+.comments .boxComments{
+	background:  var(--blue);
+	height: auto;
+	border-radius: 10px;
+	width: 100%;
+}
+/* Head Comment */
+.comments .headComment{
+	padding: 10px 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--underline);
+}
+.comments .headComment .userComment span{
+	color:  var(--blue);
+	border-radius: 10px;
+	padding: 10px;
+	margin-right: 10px;
+}
+/* textComment Comment */
+.comments .textComment{
+	max-height: 200px;
+	overflow-y: auto;
+}
+/* footer Comment */
+.comments .footerComment{
+	padding: 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--underline);
+	color: var(--darkMode);
+}
+/* hvr-emojy */
+.comments .footerComment .likeComment{
+	position: relative;
+	cursor: pointer;
+}
+.comments .footerComment .likeComment ul{
+	position: absolute;
+	top: -30px;
+	right: 30px;
+	width: auto;
+	display: flex;
+    justify-content: space-between;
+	transition: all .3s ease;
+	opacity: 0;
+}
+.comments .footerComment .likeComment:hover ul{
+	opacity: 1;
+}
+.comments .footerComment .likeComment ul li{
+	margin-left: 5%;
+	transition: all .3s ease;
+}
+.comments .footerComment .likeComment ul li:hover{
+	color: #ff4545;
+	transform: scale(1.3);
+}
+/* Type Comments */
+.typeComment{
+	outline-color: #09122600;
+	width: 100%;
+	height: 148px;
+	background: var(--blue2);
+	color: var(--darkMode);
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+}
+.btnComment{
+	background: var(--red);
+	color: #EEE;
+    box-shadow: inset 5px 5px 9px rgb(2 2 29 / 77%);
+    width: 100px;
+    height: 120%;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+details summary{
+	color: var(--darkMode);
+}
+/*==============================
+	End Comment
+==============================*/
+
+
+/*==============================
+	Responsive
+==============================*/
+@media (max-width: 1460px) {
+	.d-none-1460{
+		display: none;
+	}
+	.d-inline-block-1460{
+		display: inline-block;
+	}
+}
+@media (max-width: 1190px) {
+	.d-none-1190{
+		display: none;
+	}
+	.d-inline-block-1190{
+		display: inline-block;
+	}
+}
+
+@media (max-width: 1080px) {
+	/* Header */
+	header{
+		height: auto;
+		width: 100%;
+		display: flex;
+	}
+	.overlay,.overllay,.overllay2{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+	}
+	.overlay img{
+		width: 100%;
+		background-size: cover;
+		position: absolute;
+		top: -220px;
+	}
+	/* card */
+	header .card{
+		margin: auto;
+		height: auto;
+		width: 250px;
+	}
+	header .card img{
+		min-height: 300px;
+		max-width: 250px;
+		min-width: 200px;
+	}
+	.card .btnTrailer{
+		position: absolute;
+		top: 35%;
+		right: 34%;
+	}
+	.trailer-views{
+		margin-top: 10px !important;
+		width: 250px;
+		margin: auto;
+	}
+	/* details */
+	.upDerails{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: auto;
+		margin: 25px 0 !important;
+	}
+	header .titleCard, .story, .details, .down-watch{
+		width: 100%;
+		margin: 0 auto 30px;
+	}
+	h2{ font-size: 1.5rem!important;}
+	header  h5{ color: #F7FF00; font: 20px;}
+	header .story p{
+		min-height: 110px;
+		max-height: 100px;
+		overflow-y: scroll;
+		margin: 0 0 30px 0;
+	}
+	header.down-watch{
+		height: auto;
+		width: 100%;
+		display: flex !important;
+		justify-content: space-between !important;
+	}
+	.box{
+		display: inline-flex;
+		width: 266px;
+		margin-bottom: 10px;
+	}
+	.btn-shadow{
+		font-size: 16px !important;
+		padding: 5px;
+		margin-bottom: 5px;
+		box-shadow: none;
+	}
+	/* download watch */
+	.down-watch .watch,.down-watch .down{
+		padding: 10px 5px;
+		font-size: 18px!important;
+		color: var(--darkMode);
+		border-radius: 10px;
+		box-shadow: none;
+	}
+	.down-watch .watch{
+		margin-right: 10px;
+	}
+}
+@media (max-width: 990px) {
+	.d-none-990{
+		display: none !important;
+	}
+	.d-inline-block-990{
+		display: inline-block;
+	}
+	
+}
+@media (max-width: 740px) {
+	.d-none-740{
+		display: none!important;
+	}
+	.d-inline-block-740{
+		display: inline-block!important;
+	}
+	.container-custom{
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+@media (max-width: 660px) {
+	/* Header */
+	header .details{
+		display: flex;
+		flex-direction: column;
+	}
+	h2{ font-size: 1.1rem!important;}
+	header  h5{ font-size: 15px;}
+	p{
+		font-size: 15px;
+	}
+	header .box span{
+		width: 98px;
+		font-size: 13px;
+		text-align: center;
+	}
+	.down-watch .watch, .down-watch .down {
+		padding: 15px 10px !important;
+		font-size: 16px!important;
+		color: var(--darkMode);
+		border-radius: 10px;
+		box-shadow: none;
+	}
+	#bubbleTrailer iframe{
+		max-height: 299px;
+	}
+	/* Cast */
+	.mainCast .cast img {
+		width: 70px!important;
+		height: 70px;
+	}
+	.owl-theme .owl-nav {
+		margin: -233px -27px 0px 0px;
+	}
+	/* Comments */
+	.comments ,.headComment{
+		font-size: 14px;
+	}
+}
+@media (max-width: 590px) {
+	.d-none-590{
+		display: none!important;
+	}
+	
+	.d-inline-block-590{
+		display: inline-block!important;
+	}
+	/* Search */
+	#sectionSearch form{
+		width: 90%;
+	}
+	#sectionSearch input{
+		width: 100%;
+		min-width: auto!important;
+	}
+	/* Titele page */
+	h3{
+		font-size: 22px !important;
+	}
+	/* Cast */
+	main .cast img {
+		width: 70px!important;
+		height: 70px;
+	}
+	.cast a , .cast p{
+		font-size: 14px !important;
+	}
+	.owl-theme .owl-nav {
+		margin: -207px -27px 0px 0px;
+	}
+	.owl-next , .owl-prev {
+		font-size: 45px !important;
+	}
+	/* download watch */
+	.down-watch .watch ,.down{
+		min-width:160px!important;
+		padding: 15px 10px;
+		margin-top: 10px;
+		font-size: 16px!important;
+		color: var(--darkMode);
+		border-radius: 10px;
+		box-shadow: none;
+	}
+}
+  
